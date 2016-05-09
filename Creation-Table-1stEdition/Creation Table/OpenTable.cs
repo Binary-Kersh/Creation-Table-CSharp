@@ -363,7 +363,10 @@ namespace Creation_Table
             {
                 dataGridView1.CurrentCell.ErrorText = "Invalid Data";
             }
-           
+           else
+           {
+               dataGridView1.CurrentCell.ErrorText = null;
+           }
         }
     }
 
