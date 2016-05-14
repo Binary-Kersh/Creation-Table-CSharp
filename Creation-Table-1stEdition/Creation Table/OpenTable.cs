@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -303,6 +303,16 @@ namespace Creation_Table
             List<List<string>> temp = obj.li[y];
             Boolean ok = true;
             int targetcol = e.ColumnIndex, targetrow = e.RowIndex + 6;
+            if (temp[targetcol][3] == "True")
+            {
+                for(int i =0;i<temp[targetcol].Count;i++)
+                {
+                    if(i!=targetrow&&temp[targetcol][targetrow]==temp[targetcol][i])
+                    {
+                        ok = false;
+                    }
+                }
+            }
             if (temp[targetcol][1] == "Integer ")
             {
                 for (int k = 0; k < temp[targetcol][targetrow].Count(); k++)
