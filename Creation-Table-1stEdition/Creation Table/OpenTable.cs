@@ -313,6 +313,21 @@ namespace Creation_Table
                     }
                 }
             }
+            if (temp[targetcol][2] == "False")
+            {
+                int counterfornull = 0;
+                for (int i = 6; i < temp[targetcol].Count; i++)
+                {
+                    if (temp[targetcol][i] == "/**********************/$%^&*!@#$%^&$@#!@#123215464" + counterfornull)
+                    {
+                        if(i==targetrow)
+                        {
+                            ok = false;
+                        }
+                        counterfornull++;
+                    }
+                }
+            }
             if (temp[targetcol][1] == "Integer ")
             {
                 for (int k = 0; k < temp[targetcol][targetrow].Count(); k++)
